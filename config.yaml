@@ -1,0 +1,49 @@
+camera:
+  width: 848
+  height: 480
+  fps: 30
+  emitter_enabled: false
+  warmup_frames: 30
+  serial_number: null
+  frame_timeout_ms: 5000
+
+qr:
+  expected_ids:
+    - QR_A
+    - QR_B
+  polygon_shrink_ratio: 0.75
+  min_edge_pixels: 35
+  corner_refinement: true
+
+plane:
+  ransac_iterations: 200
+  distance_threshold: 0.004
+  min_points: 80
+  min_inlier_ratio: 0.65
+  max_rms: 0.003
+  sample_stride: 2
+  random_seed: 0
+  degenerate_epsilon: 1.0e-12
+
+measurement:
+  min_depth: 0.25
+  max_depth: 2.0
+  min_valid_depth_ratio: 0.35
+  min_spatial_quadrants: 3
+  min_points_per_quadrant: 5
+  warning_tilt_deg: 45
+  max_tilt_deg: 60
+  ray_parallel_epsilon: 1.0e-10
+
+temporal:
+  window_size: 20
+  min_valid_frames: 10
+
+visualization:
+  enabled: true
+  depth_min_m: 0.25
+  depth_max_m: 2.0
+
+recording:
+  csv_enabled: false
+  flush_every_row: true

@@ -1,0 +1,37 @@
+[project]
+name = "d435-qr-measure"
+version = "0.1.0"
+description = "Measure the 3D Euclidean distance between two QR-code centers with an Intel RealSense D435i."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+keywords = ["realsense", "d435i", "qr-code", "depth-camera", "3d-measurement"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+  "numpy>=1.24,<3",
+  "opencv-python>=4.8,<5",
+  "PyYAML>=6.0,<7",
+]
+
+[project.optional-dependencies]
+realsense = ["pyrealsense2>=2.54,<3"]
+qr = ["qrcode[pil]>=8.2,<9"]
+
+[dependency-groups]
+dev = ["pytest>=8.0,<10"]
+
+[tool.uv]
+package = false
+
+[project.urls]
+Repository = "https://github.com/snake-fan/D435i_Estimation_of_spatial_distance"
+Issues = "https://github.com/snake-fan/D435i_Estimation_of_spatial_distance/issues"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

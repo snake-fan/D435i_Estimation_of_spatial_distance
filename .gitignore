@@ -1,0 +1,16 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Hardware recordings and default runtime outputs
+*.bag
+measurements_*.csv
+measurements_*.jsonl
+debug_points/
+/data/
+/outputs/
